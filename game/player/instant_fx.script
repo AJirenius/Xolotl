@@ -1,6 +1,11 @@
+go.property("fx", msg.url("#particlefx"))
+
 
 function init(self)
-    particlefx.play("#particlefx")
+	print(self.fx, msg.url())
+	local ur = msg.url()
+	ur.fragment = self.fx.fragment
+    particlefx.play(ur)--self.fx)
    self.timer = 1000
 end
 

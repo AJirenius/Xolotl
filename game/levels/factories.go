@@ -33,9 +33,9 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "teleport_fx"
+  id: "instant_fx"
   type: "factory"
-  data: "prototype: \"/game/player/teleport_fx.go\"\n"
+  data: "prototype: \"/game/player/instant_fx.go\"\n"
   ""
   position {
     x: 0.0

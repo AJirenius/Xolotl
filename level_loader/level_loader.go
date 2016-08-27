@@ -64,3 +64,37 @@ embedded_components {
     w: 1.0
   }
 }
+embedded_components {
+  id: "lvl_4"
+  type: "collectionproxy"
+  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "lvl_5"
+  type: "collectionproxy"
+  data: "collection: \"/game/levels/lvl_5/lvl_5.collection\"\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}

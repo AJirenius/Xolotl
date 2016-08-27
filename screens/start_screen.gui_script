@@ -1,10 +1,10 @@
 local simple_button = require "utils.simple_button"
 local user = require "game.user"
-
+local config = require "main.config"
 local function start_game()
-	user.save_progress(self, 1)
+	user.save_progress(self, 1 or config.START_LEVEL)
 	print("starting level:",user.user.progress)
-	msg.post("/level_loader", "load_level", {id = user.user.progress})
+	msg.post("/level_loader", "load_level", {id = config.START_LEVEL or user.user.progress})
 end
 
 local function continue_game()

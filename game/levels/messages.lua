@@ -15,5 +15,13 @@ return {
 		title = "Dead end",
 		msg = "Try to press down..."
 		},
+[5] = { 
+		title = "Oh my",
+		msg = "Aren't you a ambitious little fellow"
+		},
+[6] = { 
+		title = "Your devoted friend",
+		msg = "He doesn't seem to like the color red, now does he?"
+		},
 }
 

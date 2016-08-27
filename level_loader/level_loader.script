@@ -8,8 +8,7 @@ local current_level = 1
 local current_proxy
 
 function on_message(self, message_id, message, sender)
-	print(message_id)
-	pprint(message)
+
     if message_id == hash("load_level") then
     	message.id = message.id or current_level
     	local str = "#lvl_"..tostring(message.id)
@@ -24,6 +23,9 @@ function on_message(self, message_id, message, sender)
     end
     if message_id == hash("completed_level") then
     	msg.post(current_proxy, "disable")
+        msg.post(current_proxy, "final")
+        msg.post(current_proxy, "unload")
+    	
     	current_level = current_level + 1
     	user.save_progress(self, current_level)
     	msg.post(".", "load_level", { id = current_level })

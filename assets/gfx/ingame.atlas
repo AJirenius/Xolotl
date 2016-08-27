@@ -16,6 +16,9 @@ images {
 images {
   image: "/assets/gfx/msg_sign.png"
 }
+images {
+  image: "/assets/gfx/fx/blood_dot-6.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0
