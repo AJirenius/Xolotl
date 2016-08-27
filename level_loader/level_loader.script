@@ -1,6 +1,5 @@
 function init(self)
-    -- Add initialization code here
-    -- Remove this function if not needed
+	msg.post(".", "acquire_input_focus")
 end
 
 function final(self)
