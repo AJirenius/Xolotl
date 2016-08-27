@@ -1,8 +1,6 @@
-embedded_components {
-  id: "arrow"
-  type: "factory"
-  data: "prototype: \"/game/arrow/arrow.go\"\n"
-  ""
+components {
+  id: "particlefx"
+  component: "/assets/fx/teleport_fx.particlefx"
   position {
     x: 0.0
     y: 0.0
@@ -15,11 +13,9 @@ embedded_components {
     w: 1.0
   }
 }
-embedded_components {
-  id: "arrow_wall"
-  type: "factory"
-  data: "prototype: \"/game/arrow/arrow_wall.go\"\n"
-  ""
+components {
+  id: "script"
+  component: "/game/player/instant_fx.script"
   position {
     x: 0.0
     y: 0.0

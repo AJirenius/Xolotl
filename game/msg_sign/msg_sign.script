@@ -1,0 +1,11 @@
+go.property("msg_id",1)
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("trigger_response") then
+    	if message.enter == true then
+    		msg.post("/hud", "show_message", { id = self.msg_id })
+    	else
+    		msg.post("/hud", "hide_message")
+    	end
+    end
+end

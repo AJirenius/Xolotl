@@ -1,6 +1,6 @@
 image: "/assets/gfx/player/spine_raw/skeleton-idle.png"
-tile_width: 52
-tile_height: 61
+tile_width: 60
+tile_height: 64
 tile_margin: 1
 tile_spacing: 0
 collision: ""
@@ -29,6 +29,15 @@ animations {
   start_tile: 33
   end_tile: 48
   playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "teleport"
+  start_tile: 50
+  end_tile: 56
+  playback: PLAYBACK_ONCE_FORWARD
   fps: 30
   flip_horizontal: 0
   flip_vertical: 0

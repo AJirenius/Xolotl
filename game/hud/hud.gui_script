@@ -1,0 +1,40 @@
+--[[
+local mess = {
+	[1] = { 
+		title = "What is this?",
+		msg = "This is the first message ever. Will it work? This is the first message ever. Will it work? This is the first message ever. Will it work?"
+		},
+		[2] = { 
+		title = "Nice",
+		msg = "It's a working"
+		},
+}
+--]]
+
+local mess = require "game.levels.messages"
+
+function init(self)
+   self.msg_title = gui.get_node("msg_title")
+   self.msg_txt = gui.get_node("msg_txt")
+   self.msg_box = gui.get_node("msg_box")
+   self.bv = gui.get_size(self.msg_box)
+   gui.set_color(self.msg_box, vmath.vector4(1,1,1,0))
+   gui.set_enabled(self.msg_box, false)
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("show_message") then
+    	gui.set_enabled(self.msg_box, true)
+    	print("show mess:",message.id)
+    	local m = mess[message.id]
+    	gui.set_text(self.msg_title, m.title)
+    	gui.set_text(self.msg_txt, m.msg)
+    	self.bv.y = gui.get_text_metrics_from_node(self.msg_txt).height+75+40
+    	gui.set_size(self.msg_box, self.bv)
+    	gui.animate(self.msg_box, "color", vmath.vector4(1,1,1,1), gui.EASING_INSINE, 0.1)
+    	gui.animate(self.msg_box, "scale", 1, gui.EASING_INSINE, 0.1)
+    elseif message_id == hash("hide_message") then
+    	gui.animate(self.msg_box, "color", vmath.vector4(1,1,1,0), gui.EASING_INSINE, 0.2, 0.2 , function() gui.set_enabled(self.msg_box, false) end )
+    	gui.animate(self.msg_box, "scale", 0.8, gui.EASING_INSINE, 0.2, 0.2  )
+    end
+end

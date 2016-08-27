@@ -6,12 +6,13 @@ function init(self)
 	self.gop = gop.get_properties()
 	particlefx.play("#streakfx")
 	particlefx.play("#smokefx")
+	self.gop.enabled = true
 end
 
 
 function update(self, dt)
     local ppos = go.get_position(self.player)
-    local pos = vmath.vector3(- ppos.x, - ppos.y, 0)
+    local pos = vmath.vector3(config.WIDTH- ppos.x+16, config.HEIGHT- ppos.y-64, 0)
     go.set_position(pos)
 end
 

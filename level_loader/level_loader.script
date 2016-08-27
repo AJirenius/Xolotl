@@ -1,37 +1,31 @@
+local user = require "game.user"
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 end
 
-function final(self)
-    -- Add finalization code here
-    -- Remove this function if not needed
-end
-
-function update(self, dt)
-    -- Add update code here
-    -- Remove this function if not needed
-end
+local current_level = 1
+local current_proxy
 
 function on_message(self, message_id, message, sender)
 	print(message_id)
 	pprint(message)
     if message_id == hash("load_level") then
-    	local str = "#lvl_"..tostring(message.id).."_proxy"
+    	message.id = message.id or current_level
+    	local str = "#lvl_"..tostring(message.id)
     	msg.post(str, "load")
+    	current_level = message.id
     end
     if message_id == hash("proxy_loaded") then
+    	current_proxy = sender
         msg.post(sender, "init")
     	msg.post(sender, "enable")
     	msg.post("/start_screen", "disable")
     end
-end
-
-function on_input(self, action_id, action)
-    -- Add input-handling code here
-    -- Remove this function if not needed
-end
-
-function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
+    if message_id == hash("completed_level") then
+    	msg.post(current_proxy, "disable")
+    	current_level = current_level + 1
+    	user.save_progress(self, current_level)
+    	msg.post(".", "load_level", { id = current_level })
+    end
 end

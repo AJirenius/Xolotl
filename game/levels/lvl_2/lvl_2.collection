@@ -1,17 +1,10 @@
-name: "lvl_1"
+name: "lvl_2"
 instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
     x: 334.55722
     y: 30.790472
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -22,17 +15,6 @@ instances {
 instances {
   id: "factories"
   prototype: "/game/levels/factories.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -43,15 +25,8 @@ instances {
   id: "hud"
   prototype: "/game/hud/hud.go"
   position {
-    x: 479.22763
-    y: 175.18253
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
+    x: 272.0
+    y: 240.0
   }
   scale3 {
     x: 1.0
@@ -60,18 +35,10 @@ instances {
   }
 }
 instances {
-  id: "lvl_1"
-  prototype: "/game/levels/lvl_1/lvl_1.go"
+  id: "lvl"
+  prototype: "/game/levels/lvl_2/lvl.go"
   position {
     x: -0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -83,15 +50,16 @@ instances {
   id: "msg_sign"
   prototype: "/game/msg_sign/msg_sign.go"
   position {
-    x: 200.4467
-    y: 71.77507
-    z: 0.0
+    x: 118.76923
+    y: 61.846153
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
+  component_properties {
+    id: "script"
+    properties {
+      id: "msg_id"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
   }
   scale3 {
     x: 1.0
@@ -105,21 +73,6 @@ instances {
   position {
     x: 65.86942
     y: 47.054134
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "has_shadow"
-      value: "0.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
   }
   scale3 {
     x: 1.0
@@ -127,4 +80,3 @@ instances {
     z: 1.0
   }
 }
-scale_along_z: 0

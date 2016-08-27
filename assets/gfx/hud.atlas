@@ -7,6 +7,9 @@ images {
 images {
   image: "/assets/gfx/gui/button_red.png"
 }
+images {
+  image: "/assets/gfx/gui/msg_sign.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0

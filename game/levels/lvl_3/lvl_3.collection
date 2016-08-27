@@ -1,10 +1,10 @@
-name: "lvl_1"
+name: "lvl_3"
 instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
-    x: 334.55722
-    y: 30.790472
+    x: 77.28147
+    y: 32.505642
     z: 0.0
   }
   rotation {
@@ -43,8 +43,8 @@ instances {
   id: "hud"
   prototype: "/game/hud/hud.go"
   position {
-    x: 479.22763
-    y: 175.18253
+    x: 272.0
+    y: 240.0
     z: 0.0
   }
   rotation {
@@ -60,8 +60,8 @@ instances {
   }
 }
 instances {
-  id: "lvl_1"
-  prototype: "/game/levels/lvl_1/lvl_1.go"
+  id: "lvl"
+  prototype: "/game/levels/lvl_3/lvl_3.go"
   position {
     x: -0.0
     y: 0.0
@@ -83,8 +83,64 @@ instances {
   id: "msg_sign"
   prototype: "/game/msg_sign/msg_sign.go"
   position {
-    x: 200.4467
-    y: 71.77507
+    x: 233.68573
+    y: 300.255
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "msg_id"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "msg_sign1"
+  prototype: "/game/msg_sign/msg_sign.go"
+  position {
+    x: 444.65186
+    y: 301.97018
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "msg_id"
+      value: "4.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "player"
+  prototype: "/game/player/player.go"
+  position {
+    x: 71.01494
+    y: 369.5064
     z: 0.0
   }
   rotation {
@@ -100,11 +156,11 @@ instances {
   }
 }
 instances {
-  id: "player"
-  prototype: "/game/player/player.go"
+  id: "shadow"
+  prototype: "/game/shadow/shadow.go"
   position {
-    x: 65.86942
-    y: 47.054134
+    x: 1280.2977
+    y: 529.1889
     z: 0.0
   }
   rotation {
@@ -112,14 +168,6 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "has_shadow"
-      value: "0.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
   }
   scale3 {
     x: 1.0

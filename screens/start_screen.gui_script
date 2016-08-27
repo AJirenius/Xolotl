@@ -1,12 +1,16 @@
 local simple_button = require "utils.simple_button"
+local user = require "game.user"
 
 local function start_game()
-	print("starting game")
-	msg.post("/level_loader", "load_level", {id = 1})
+	user.save_progress(self, 1)
+	print("starting level:",user.user.progress)
+	msg.post("/level_loader", "load_level", {id = user.user.progress})
 end
 
 local function continue_game()
-	print("continue game")
+	user.load_progress(self)
+	print("continue game on level: user.user.progress")
+	msg.post("/level_loader", "load_level", {id = user.user.progress})
 end
 
 function init(self)
@@ -17,8 +21,7 @@ end
 
 
 function on_message(self, message_id, message, sender)
-    -- Add message-handling code here
-    -- Remove this function if not needed
+   
 end
 
 function on_input(self, action_id, action)

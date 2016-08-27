@@ -10,6 +10,12 @@ images {
 images {
   image: "/assets/gfx/arrow.png"
 }
+images {
+  image: "/assets/gfx/door.png"
+}
+images {
+  image: "/assets/gfx/msg_sign.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0
