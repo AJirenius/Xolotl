@@ -1,50 +1,10 @@
 name: "main"
 instances {
-  id: "lvl_1"
-  prototype: "/game/levels/lvl_1/lvl_1.go"
+  id: "level_loader"
+  prototype: "/level_loader/level_loader.go"
   position {
-    x: -568.0
-    y: -320.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "player"
-  prototype: "/game/player/player.go"
-  position {
-    x: -336.25797
-    y: -198.73033
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "shadow"
-  prototype: "/game/shadow/shadow.go"
-  position {
-    x: 66.26059
-    y: -33.919586
+    x: 568.0
+    y: 320.0
     z: 0.0
   }
   rotation {
@@ -60,3 +20,38 @@ instances {
   }
 }
 scale_along_z: 0
+embedded_instances {
+  id: "start_screen"
+  data: "components {\n"
+  "  id: \"gui\"\n"
+  "  component: \"/screens/start_screen.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}

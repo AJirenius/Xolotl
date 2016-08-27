@@ -4,6 +4,8 @@ local gop = require "utils.gop"
 function init(self)
     self.player = go.get_id("/player")
 	self.gop = gop.get_properties()
+	particlefx.play("#streakfx")
+	particlefx.play("#smokefx")
 end
 
 
@@ -19,9 +21,13 @@ function on_message(self, message_id, message, sender)
 		if message.enter == true then
 			self.gop.enabled = false
 			msg.post("#sprite","disable")
+			particlefx.stop("#streakfx")
+			particlefx.stop("#smokefx")
 		else
 			self.gop.enabled = true
 			msg.post("#sprite","enable")
+			particlefx.play("#streakfx")
+			particlefx.play("#smokefx")
 		end
 	end
 end

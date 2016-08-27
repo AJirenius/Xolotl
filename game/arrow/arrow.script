@@ -1,0 +1,42 @@
+go.property("direction", 1)
+
+local config = require "main.config"
+
+
+function init(self)
+    if self.direction == -1 then
+    	sprite.set_hflip("#sprite", true)
+    end
+end
+
+function final(self)
+    -- Add finalization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+    local pos = go.get_position()
+    pos.x = pos.x + dt * config.ARROW_SPEED * self.direction
+    go.set_position(pos)
+end
+
+function on_message(self, message_id, message, sender)
+   if message_id == hash("contact_point_response") and message.normal.x ~= 0 and self.has_hit~= true then
+   self.has_hit = true
+   	local pos = message.position + message.normal * message.distance
+   	print(message.normal*message.distance)
+   	pos.x = pos.x + config.ARROW_WALL_WIDTH/2 * -self.direction
+   	factory.create("/factories#arrow_wall", pos, nil, {} )
+   	go.delete()
+   end
+end
+
+function on_input(self, action_id, action)
+    -- Add input-handling code here
+    -- Remove this function if not needed
+end
+
+function on_reload(self)
+    -- Add reload-handling code here
+    -- Remove this function if not needed
+end

@@ -143,8 +143,9 @@ end
 function on_input(self, action_id, action)
 	if action_id == hash("up") then
 		
-	elseif action_id == hash("down") and action.pressed == true then
-		teleport(self)
+	elseif action_id == hash("teleport") and action.pressed == true then
+		if self.shadow_gop.enabled == true then teleport(self) end
+		
 	end
 	if action_id == hash("left") then
 		self.move_input.x = -1
@@ -159,5 +160,13 @@ function on_input(self, action_id, action)
 		elseif action.released == true then
 			abort_jump(self)
 		end
+	end
+	if action_id == hash("fire") and action.pressed == true then
+		local pos = go.get_position()
+		local direction = 1
+		if self.is_flipped == true then direction = -1 end
+		pos.x = pos.x + 20*direction
+		pos.y = pos.y + 25
+		factory.create("/factories#arrow", pos, nil, { direction = direction } )
 	end
 end

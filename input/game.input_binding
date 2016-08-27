@@ -4,7 +4,7 @@ key_trigger {
 }
 key_trigger {
   input: KEY_DOWN
-  action: "down"
+  action: "teleport"
 }
 key_trigger {
   input: KEY_LEFT
@@ -18,4 +18,11 @@ key_trigger {
   input: KEY_SPACE
   action: "jump"
 }
-
+key_trigger {
+  input: KEY_Z
+  action: "fire"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "touch"
+}

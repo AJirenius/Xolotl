@@ -24,6 +24,7 @@ embedded_components {
   "group: \"wall\"\n"
   "mask: \"player\"\n"
   "mask: \"shadow\"\n"
+  "mask: \"arrow\"\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"
   "locked_rotation: false\n"

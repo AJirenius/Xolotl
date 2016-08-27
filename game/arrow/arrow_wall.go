@@ -1,64 +1,20 @@
-components {
-  id: "script"
-  component: "/game/shadow/shadow.script"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-components {
-  id: "smokefx"
-  component: "/assets/fx/shadow_smoke_1.particlefx"
-  position {
-    x: 0.0
-    y: 26.295946
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-components {
-  id: "streakfx"
-  component: "/assets/fx/shadow_streaks.particlefx"
-  position {
-    x: 0.0
-    y: 26.295946
-    z: 0.1
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
-  "type: COLLISION_OBJECT_TYPE_TRIGGER\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\n"
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"shadow\"\n"
-  "mask: \"wall\"\n"
+  "group: \"wall\"\n"
+  "mask: \"player\"\n"
+  "mask: \"arrow\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
   "      x: 0.0\n"
-  "      y: 25.30625\n"
+  "      y: 0.0\n"
   "      z: 0.0\n"
   "    }\n"
   "    rotation {\n"
@@ -70,8 +26,8 @@ embedded_components {
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 16.0\n"
-  "  data: 26.0\n"
+  "  data: 24.0\n"
+  "  data: 8.0\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
@@ -93,14 +49,14 @@ embedded_components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/assets/gfx/player/player.tilesource\"\n"
-  "default_animation: \"idle\"\n"
+  data: "tile_set: \"/assets/gfx/ingame.atlas\"\n"
+  "default_animation: \"arrow_wall\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
-  "blend_mode: BLEND_MODE_MULT\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
     x: 0.0
-    y: 28.444443
+    y: 0.0
     z: 0.0
   }
   rotation {

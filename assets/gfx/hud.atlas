@@ -1,0 +1,12 @@
+images {
+  image: "/assets/gfx/gui/button_blue.png"
+}
+images {
+  image: "/assets/gfx/gui/button_green.png"
+}
+images {
+  image: "/assets/gfx/gui/button_red.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

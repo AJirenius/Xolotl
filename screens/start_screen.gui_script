@@ -1,0 +1,26 @@
+local simple_button = require "utils.simple_button"
+
+local function start_game()
+	print("starting game")
+	msg.post("/level_loader", "load_level", {id = 1})
+end
+
+local function continue_game()
+	print("continue game")
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+    self.start_btn = simple_button.create(self, "start_btn", start_game, {})
+    self.continue_btn = simple_button.create(self, "continue_btn", continue_game, {})
+end
+
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+    simple_button.on_input(self, action_id, action)
+end

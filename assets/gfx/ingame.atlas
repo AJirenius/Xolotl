@@ -1,6 +1,15 @@
 images {
   image: "/assets/gfx/fx/smoke.png"
 }
+images {
+  image: "/assets/gfx/fx/streak.png"
+}
+images {
+  image: "/assets/gfx/arrow_wall.png"
+}
+images {
+  image: "/assets/gfx/arrow.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0
