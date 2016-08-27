@@ -1,0 +1,18 @@
+go.property("pulse_target",msg.url())
+go.property("toggle_times",2)
+function init(self)
+    self.toggle = 1
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("trigger_response") and message.enter == true and self.toggle_times > 0 then
+    	msg.post(self.pulse_target, "pulse")
+    	self.toggle_times = self.toggle_times - 1
+    	self.toggle = self.toggle * -1
+    	if self.toggle == 1 then
+    		msg.post("#sprite","play_animation",{id = hash("lever1")})
+    	else
+    		msg.post("#sprite","play_animation",{id = hash("lever2")})
+    	end
+    end
+end

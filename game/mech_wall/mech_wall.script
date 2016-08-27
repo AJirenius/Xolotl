@@ -1,0 +1,47 @@
+go.property("open_speed",2)
+go.property("close_speed",2)
+go.property("timer",99999)
+go.property("cog1",msg.url())
+go.property("cog2",msg.url())
+go.property("cog3",msg.url())
+
+function init(self)
+    self.pos1 = go.get_position()
+    self.pos2 = go.get_position()
+    self.pos2.y = self.pos2.y + 128
+    self.is_open = false
+    self.current_time = 0
+end
+
+local function run_cogs(self)
+	msg.post(self.cog1, "run")
+	msg.post(self.cog2, "run")
+	msg.post(self.cog3, "run")
+end
+
+function update(self, dt)
+   	if self.is_open == true then
+   		self.current_time = self.current_time - dt
+   		if self.current_time < 0 then 
+   			self.is_open = false
+   			run_cogs(self)
+    		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos.y, go.EASING_OUTINSINE, self.close_speed, 0)
+   		end
+   	end
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("pulse") then
+    	if self.is_open == false then
+	    	self.is_open = true
+	    	self.current_time = self.timer
+	    	run_cogs(self)
+	    	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos2.y, go.EASING_OUTINSINE, self.open_speed, 0)
+     	else
+     		self.is_open = false
+     		run_cogs(self)
+    		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos1.y, go.EASING_OUTINSINE, self.close_speed, 0)
+     	end
+    end
+end
+

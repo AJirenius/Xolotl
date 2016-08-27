@@ -5,6 +5,13 @@ instances {
   position {
     x: 334.55722
     y: 30.790472
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -15,6 +22,17 @@ instances {
 instances {
   id: "factories"
   prototype: "/game/levels/factories.go"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -27,6 +45,13 @@ instances {
   position {
     x: 272.0
     y: 240.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -39,6 +64,14 @@ instances {
   prototype: "/game/levels/lvl_2/lvl.go"
   position {
     x: -0.0
+    y: 0.0
+    z: -0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -52,6 +85,13 @@ instances {
   position {
     x: 118.76923
     y: 61.846153
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   component_properties {
     id: "script"
@@ -73,6 +113,13 @@ instances {
   position {
     x: 65.86942
     y: 47.054134
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -80,3 +127,4 @@ instances {
     z: 1.0
   }
 }
+scale_along_z: 0

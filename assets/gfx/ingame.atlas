@@ -19,6 +19,24 @@ images {
 images {
   image: "/assets/gfx/fx/blood_dot-6.png"
 }
-margin: 0
-extrude_borders: 0
+images {
+  image: "/assets/gfx/cog1.png"
+}
+images {
+  image: "/assets/gfx/cog2.png"
+}
+images {
+  image: "/assets/gfx/cog3.png"
+}
+images {
+  image: "/assets/gfx/mech_wall.png"
+}
+images {
+  image: "/assets/gfx/lever1.png"
+}
+images {
+  image: "/assets/gfx/lever2.png"
+}
+margin: 1
+extrude_borders: 1
 inner_padding: 0
