@@ -1,0 +1,27 @@
+local config  = require "main.config"
+local gop = require "utils.gop"
+
+function init(self)
+    self.player = go.get_id("/player")
+	self.gop = gop.get_properties()
+end
+
+
+function update(self, dt)
+    local ppos = go.get_position(self.player)
+    local pos = vmath.vector3(- ppos.x, - ppos.y, 0)
+    go.set_position(pos)
+end
+
+function on_message(self, message_id, message, sender)
+
+    if message_id == hash("trigger_response")  then 
+		if message.enter == true then
+			self.gop.enabled = false
+			msg.post("#sprite","disable")
+		else
+			self.gop.enabled = true
+			msg.post("#sprite","enable")
+		end
+	end
+end

@@ -1,31 +1,10 @@
 name: "main"
-scale_along_z: 0
-embedded_instances {
-  id: "go"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/main/logo.atlas\\\"\\n"
-  "default_animation: \\\"logo\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 640.0\n"
-  "    y: 360.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
+instances {
+  id: "lvl_1"
+  prototype: "/game/levels/lvl_1/lvl_1.go"
   position {
-    x: 0.0
-    y: 0.0
+    x: -568.0
+    y: -320.0
     z: 0.0
   }
   rotation {
@@ -40,3 +19,44 @@ embedded_instances {
     z: 1.0
   }
 }
+instances {
+  id: "player"
+  prototype: "/game/player/player.go"
+  position {
+    x: -336.25797
+    y: -198.73033
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "shadow"
+  prototype: "/game/shadow/shadow.go"
+  position {
+    x: 66.26059
+    y: -33.919586
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+scale_along_z: 0
