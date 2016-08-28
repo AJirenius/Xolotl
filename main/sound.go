@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/level_loader/level_loader.script"
+  component: "/main/sound.script"
   position {
     x: 0.0
     y: 0.0
@@ -14,9 +14,12 @@ components {
   }
 }
 embedded_components {
-  id: "lvl_1"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_1/lvl_1.collection\"\n"
+  id: "high_fall"
+  type: "sound"
+  data: "sound: \"/assets/sfx/high_fall.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -31,9 +34,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_2"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_2/lvl_2.collection\"\n"
+  id: "jump"
+  type: "sound"
+  data: "sound: \"/assets/sfx/jump.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -48,9 +54,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_3"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_3/lvl_3.collection\"\n"
+  id: "lever"
+  type: "sound"
+  data: "sound: \"/assets/sfx/lever_new.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -65,9 +74,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_4"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
+  id: "low_fall"
+  type: "sound"
+  data: "sound: \"/assets/sfx/low_fall.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -82,9 +94,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_5"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_5/lvl_5.collection\"\n"
+  id: "step"
+  type: "sound"
+  data: "sound: \"/assets/sfx/step.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -99,9 +114,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_6"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_6/lvl_6.collection\"\n"
+  id: "teleport"
+  type: "sound"
+  data: "sound: \"/assets/sfx/teleport.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0
@@ -116,9 +134,12 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "lvl_7"
-  type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_7/lvl_7.collection\"\n"
+  id: "wall_open"
+  type: "sound"
+  data: "sound: \"/assets/sfx/wall_open.wav\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
   ""
   position {
     x: 0.0

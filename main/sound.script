@@ -1,0 +1,5 @@
+local sound = require "main.sound"
+
+function init(self)
+	sound.register(msg.url())
+end

@@ -31,5 +31,9 @@ return {
 		title = "Such a pure sacrifice",
 		msg = "I hope you are ready for your hardest challenge so far"
 		},
+[9] = { 
+		title = "Waiting",
+		msg = "We are longing for you, Please run to us"
+		},
 }
 

@@ -1,10 +1,10 @@
-name: "lvl_6"
+name: "lvl_7"
 instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
-    x: 1082.9001
-    y: 191.42136
+    x: 1087.6511
+    y: 34.640987
     z: 0.0
   }
   rotation {
@@ -63,8 +63,8 @@ instances {
   id: "lever"
   prototype: "/game/mech_wall/lever.go"
   position {
-    x: 62.251404
-    y: 479.5349
+    x: 640.89496
+    y: 224.74149
     z: 0.0
   }
   rotation {
@@ -96,8 +96,8 @@ instances {
   id: "lever1"
   prototype: "/game/mech_wall/lever.go"
   position {
-    x: 74.76049
-    y: 31.098396
+    x: 1090.1017
+    y: 479.92322
     z: 0.0
   }
   rotation {
@@ -126,8 +126,41 @@ instances {
   }
 }
 instances {
+  id: "lever2"
+  prototype: "/game/mech_wall/lever.go"
+  position {
+    x: 1072.899
+    y: 319.93893
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "pulse_target"
+      value: "mech_wall2"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
+      id: "toggle_times"
+      value: "9999.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "lvl"
-  prototype: "/game/levels/lvl_6/lvl_6.go"
+  prototype: "/game/levels/lvl_7/lvl_7.go"
   position {
     x: -0.0
     y: 0.0
@@ -149,28 +182,8 @@ instances {
   id: "mech_wall"
   prototype: "/game/mech_wall/mech_wall.go"
   position {
-    x: 880.0
+    x: 720.0
     y: 112.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "mech_wall1"
-  prototype: "/game/mech_wall/mech_wall.go"
-  position {
-    x: 176.0
-    y: 528.16486
     z: 0.0
   }
   rotation {
@@ -182,8 +195,89 @@ instances {
   component_properties {
     id: "script"
     properties {
-      id: "direction"
-      value: "3.0"
+      id: "close_speed"
+      value: "17.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "timer"
+      value: "5.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "mech_wall1"
+  prototype: "/game/mech_wall/mech_wall.go"
+  position {
+    x: 432.0
+    y: 112.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "open_speed"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "close_speed"
+      value: "11.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "timer"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "mech_wall2"
+  prototype: "/game/mech_wall/mech_wall.go"
+  position {
+    x: 240.0
+    y: 112.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "open_speed"
+      value: "0.5"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "close_speed"
+      value: "4.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "timer"
+      value: "0.5"
       type: PROPERTY_TYPE_NUMBER
     }
   }
@@ -197,8 +291,8 @@ instances {
   id: "msg_sign"
   prototype: "/game/msg_sign/msg_sign.go"
   position {
-    x: 950.2841
-    y: 62.68356
+    x: 576.54504
+    y: 449.09174
     z: 0.0
   }
   rotation {
@@ -211,35 +305,7 @@ instances {
     id: "script"
     properties {
       id: "msg_id"
-      value: "7.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "msg_sign1"
-  prototype: "/game/msg_sign/msg_sign.go"
-  position {
-    x: 128.2101
-    y: 352.23178
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "msg_id"
-      value: "8.0"
+      value: "9.0"
       type: PROPERTY_TYPE_NUMBER
     }
   }
@@ -253,8 +319,8 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 1094.6511
-    y: 34.12315
+    x: 350.7102
+    y: 369.08655
     z: 0.0
   }
   rotation {
@@ -273,8 +339,8 @@ instances {
   id: "shadow"
   prototype: "/game/shadow/shadow.go"
   position {
-    x: 1280.2977
-    y: 529.1889
+    x: 818.14233
+    y: 479.08084
     z: 0.0
   }
   rotation {

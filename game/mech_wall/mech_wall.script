@@ -5,6 +5,7 @@ go.property("cog1",msg.url())
 go.property("cog2",msg.url())
 go.property("cog3",msg.url())
 go.property("direction",1)
+local sound = require "main.sound"
 
 function init(self)
     self.pos1 = go.get_position()
@@ -22,10 +23,13 @@ function init(self)
     self.current_time = 0
 end
 
-local function run_cogs(self)
+local function move_wall(self, pos, speed)
 	msg.post(self.cog1, "run")
 	msg.post(self.cog2, "run")
 	msg.post(self.cog3, "run")
+	sound.play("wall_open")    		
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, pos, go.EASING_INOUTSINE, speed, 0)
+	
 end
 
 function update(self, dt)
@@ -33,8 +37,7 @@ function update(self, dt)
    		self.current_time = self.current_time - dt
    		if self.current_time < 0 then 
    			self.is_open = false
-   			run_cogs(self)
-    		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos.y, go.EASING_OUTINSINE, self.close_speed, 0)
+   			move_wall(self, self.pos1, self.close_speed)
    		end
    	end
 end
@@ -44,12 +47,10 @@ function on_message(self, message_id, message, sender)
     	if self.is_open == false then
 	    	self.is_open = true
 	    	self.current_time = self.timer
-	    	run_cogs(self)
-	    	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos2.y, go.EASING_OUTINSINE, self.open_speed, 0)
+	    	move_wall(self, self.pos2, self.open_speed)
      	else
      		self.is_open = false
-     		run_cogs(self)
-    		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos1.y, go.EASING_OUTINSINE, self.close_speed, 0)
+	    	move_wall(self, self.pos1, self.close_speed)
      	end
     end
 end

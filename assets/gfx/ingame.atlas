@@ -37,6 +37,9 @@ images {
 images {
   image: "/assets/gfx/lever2.png"
 }
+images {
+  image: "/assets/gfx/streak2.png"
+}
 margin: 1
 extrude_borders: 1
 inner_padding: 0

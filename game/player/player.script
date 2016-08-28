@@ -1,12 +1,12 @@
 local config  = require "main.config"
 local gop = require "utils.gop"
+local sound = require "main.sound"
 
 go.property("has_shadow", 1)
 
 local function play_anim(self, anim)
 	if self.current_anim == anim then return end
 	self.current_anim = anim
-	print("play",anim) 
 	msg.post("#sprite", "play_animation", { id = hash(anim) })
 end
 
@@ -25,6 +25,7 @@ function init(self)
 	self.gop = gop.get_properties()
 	self.vertical_contact = 0
 	self.is_teleporting = false
+	self.walk_timer = 0
 	play_anim(self, "idle")
 end
 
@@ -88,10 +89,19 @@ local function update_animation(self)
 	end
 end
 
+function update_sound(self, dt)
+	self.walk_timer = self.walk_timer - dt
+	if self.walk_timer < 0 and self.vertical_contact == 1 and math.abs(self.velocity.x) > 2 then
+		sound.play("step")
+		self.walk_timer = config.STEP_SOUND_TIME
+	end
+end
+
 function update(self, dt)
 	
 	if self.is_teleporting == true or self.is_dead == true then return end
 	update_animation(self)
+	update_sound(self, dt)
 	update_movement(self, dt)
     update_reset(self)
 end
@@ -101,6 +111,7 @@ local function fall_death(self)
 	self.is_dead = true
 	factory.create("/factories#instant_fx", go.get_position(), nil, { fx = msg.url("#blood_splatter")})
 	play_anim(self, "fall_death")
+	sound.play("high_fall")
 	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 2, 0, show_game_over)
 end
 
@@ -146,6 +157,7 @@ local function jump(self)
 		self.velocity.y = config.JUMP_ACCELERATION
 		self.vertical_contact = 0
 		play_anim(self, "jump")
+		sound.play("jump")
 	end
 end
 
@@ -165,6 +177,7 @@ local function teleport(self)
 		factory.create("/factories#instant_fx", fx_pos)
 		play_anim(self, "teleport")
 		self.is_teleporting = true
+		sound.play("teleport")
 		go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0.1, go.EASING_INBACK, 0.45, 0, function()
 			go.set_scale(1)
 			self.is_teleporting = false

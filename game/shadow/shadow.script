@@ -21,12 +21,10 @@ function on_message(self, message_id, message, sender)
     if message_id == hash("trigger_response")  then 
 		if message.enter == true then
 			self.gop.enabled = false
-			msg.post("#sprite","disable")
 			particlefx.stop("#streakfx")
 			particlefx.stop("#smokefx")
 		else
 			self.gop.enabled = true
-			msg.post("#sprite","enable")
 			particlefx.play("#streakfx")
 			particlefx.play("#smokefx")
 		end
