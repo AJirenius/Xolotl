@@ -377,6 +377,26 @@ instances {
   }
 }
 instances {
+  id: "lightbeam"
+  prototype: "/game/lightbeam.go"
+  position {
+    x: 1090.582
+    y: 574.28894
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.32404304
+    w: 0.94604236
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "lvl"
   prototype: "/game/levels/lvl_7/lvl_7.go"
   position {
@@ -604,6 +624,186 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 188.36565
+    y: 253.32347
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area1"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 333.67838
+    y: 95.23599
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area2"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 520.50903
+    y: 96.83284
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area3"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 637.0786
+    y: 111.20443
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.7173561
+    w: 0.6967067
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area4"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 1004.35254
+    y: 104.817055
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area5"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 189.9625
+    y: 261.30768
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area_long"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 827.1029
+    y: 74.477036
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area_long1"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 167.60669
+    y: 109.60758
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area_long2"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 170.80037
+    y: 376.2804
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
   }
   scale3 {
     x: 1.0

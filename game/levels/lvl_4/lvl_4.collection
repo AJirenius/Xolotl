@@ -184,6 +184,26 @@ instances {
   }
 }
 instances {
+  id: "lightbeam"
+  prototype: "/game/lightbeam.go"
+  position {
+    x: 1139.5256
+    y: 628.4126
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.3334871
+    w: 0.9427547
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "lvl"
   prototype: "/game/levels/lvl_4/lvl_4.go"
   position {

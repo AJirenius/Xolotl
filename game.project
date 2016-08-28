@@ -1,7 +1,7 @@
 [project]
 title = Xolotl
 version = 0.1
-write_log = 1
+write_log = 0
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -13,7 +13,7 @@ game_binding = /input/game.input_bindingc
 [display]
 width = 1136
 height = 640
-variable_dt = 0
+variable_dt = 1
 fullscreen = 0
 
 [physics]

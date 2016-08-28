@@ -21,19 +21,19 @@ return {
 		},
 [6] = { 
 		title = "Your devoted friend",
-		msg = "He doesn't seem to like the color red, now does he?"
+		msg = "It doesn't seem to like the color red, now does it?"
 		},
 [7] = { 
 		title = "No way out",
-		msg = "Well, that was before out dark friend, right?"
+		msg = "Well, that was before our dark little helper, right?"
 		},
 [8] = { 
 		title = "Such a pure sacrifice",
 		msg = "I hope you are ready for your hardest challenge so far"
 		},
 [9] = { 
-		title = "Waiting",
-		msg = "We are longing for you, Please run to us"
+		title = "Waiting...",
+		msg = "We are longing for you, Please hurry up"
 		},
 }
 
