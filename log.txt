@@ -3,5 +3,4 @@ INFO:ENGINE: Loading data from: build/default
 INFO:ENGINE: Initialised sound device 'default'
 
 INFO:DLIB: SSDP: Started on address 192.168.1.27
-DEBUG:SCRIPT: proxy:	url: [main:/level_loader#lvl_8]	LOADED
 INFO:DLIB: SSDP: Done on address 192.168.1.27
