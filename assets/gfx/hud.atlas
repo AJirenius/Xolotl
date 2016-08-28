@@ -10,6 +10,9 @@ images {
 images {
   image: "/assets/gfx/gui/msg_sign.png"
 }
+images {
+  image: "/assets/gfx/start_bg.png"
+}
 margin: 1
 extrude_borders: 1
 inner_padding: 0

@@ -1,5 +1,129 @@
 name: "lvl_4"
 instances {
+  id: "cog"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 975.9249
+    y: 314.91113
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.2"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.3"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "auto_start"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 1.0
+  }
+}
+instances {
+  id: "cog1"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 865.0017
+    y: 240.00197
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.5"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.4"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "auto_start"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "skin"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 1.0
+  }
+}
+instances {
+  id: "cog2"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 931.2675
+    y: 156.44942
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.2"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "auto_start"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "skin"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 1.0
+  }
+}
+instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
@@ -113,7 +237,7 @@ instances {
   position {
     x: 55.24171
     y: 549.57825
-    z: 0.0
+    z: 0.1
   }
   rotation {
     x: 0.0
@@ -148,3 +272,43 @@ instances {
   }
 }
 scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/gfx/ingame.atlas\\\"\\n"
+  "default_animation: \\\"xol\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: -642.49023\n"
+  "    y: 38.89515\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 955.7762
+    y: 251.51909
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}

@@ -1,39 +1,45 @@
 go.property("delay",0.4)
 go.property("time",0.5)
-go.property("amount",0.03)
-go.property("repeats",5)
 go.property("auto_start",0)
-go.property("skin",hash("cog1"))
-go.property("rrot",0)
+go.property("skin",1)
+
+
+local tbl = {
+	{
+		skin = hash("cog1"),
+		amount = 30
+	},
+	{
+		skin = hash("cog2"),
+		amount = 90,	
+	},
+	{
+		skin = hash("cog3"),
+		amount = -45	
+	},
+}
 
 local function turn(self)
-	
-	if self.current_repeat < 1 then return end
-	self.rot = self.rot + self.amount
-	go.animate(".", "rrot", go.PLAYBACK_ONCE_FORWARD, self.rot, go.EASING_LINEAR, self.time, self.delay, function() 
-		self.current_repeat = self.current_repeat - 1
-		--self.rot = self.rot%90
-		print(self.rot)
+	go.set_rotation(vmath.quat_rotation_z(0))
+	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, self.cog.amount, go.EASING_LINEAR, self.time, self.delay, function() 
 		turn(self) 
 	end)
 end
 
-function update(self, dt)
-	go.set_rotation(vmath.quat_rotation_z(self.rrot))
-end
 
 function init(self)
-	msg.post("#sprite","play_animation",{id = self.skin})
-	self.rot = 0
+	self.cog = tbl[self.skin]
+	msg.post("#sprite","play_animation",{id = self.cog.skin})
    	if self.auto_start == 1 then 
-   		self.current_repeat = self.repeats
    		turn(self) 
    	end
 end
 
 function on_message(self, message_id, message, sender)
-    if message_id == hash("run") then
-    	self.current_repeat = self.repeats
+    if message_id == hash("start") then
     	turn(self)
+    elseif message_id == hash("stop") then
+    	go.cancel_animations(".", "euler.z")
     end
+    
 end

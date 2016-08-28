@@ -63,14 +63,68 @@ nodes {
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
   clipping_inverted: false
-  alpha: 0.45
+  alpha: 0.4
   template_node_child: false
   size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 568.0
-    y: 445.92868
+    y: 320.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1136.0
+    y: 640.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "hud/start_bg"
+  id: "bg1"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 0.6
+  template_node_child: false
+  size_mode: SIZE_MODE_MANUAL
+}
+nodes {
+  position {
+    x: 568.0
+    y: 301.91916
     z: 0.0
     w: 1.0
   }
@@ -154,7 +208,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "New Game"
+  text: "NEW GAME"
   font: "arial"
   id: "start_txt"
   xanchor: XANCHOR_NONE
@@ -191,7 +245,7 @@ nodes {
 nodes {
   position {
     x: 568.0
-    y: 272.0713
+    y: 128.06178
     z: 0.0
     w: 1.0
   }
@@ -275,7 +329,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Continue"
+  text: "CONTINUE"
   font: "arial"
   id: "continue_txt"
   xanchor: XANCHOR_NONE
@@ -312,7 +366,7 @@ nodes {
 nodes {
   position {
     x: 568.0
-    y: 445.92868
+    y: 401.0426
     z: 0.0
     w: 1.0
   }
@@ -433,7 +487,7 @@ nodes {
 nodes {
   position {
     x: 0.0
-    y: -22.778946
+    y: -19.645752
     z: 0.0
     w: 1.0
   }
@@ -500,7 +554,7 @@ nodes {
 nodes {
   position {
     x: 568.0
-    y: 272.0713
+    y: 227.18521
     z: 0.0
     w: 1.0
   }

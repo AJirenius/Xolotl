@@ -1,7 +1,7 @@
 local simple_button = require "utils.simple_button"
 local user = require "game.user"
 local config = require "main.config"
-
+local sound = require "main.sound"
 local STATE_HIDDEN = 0
 local STATE_MENU = 1
 local STATE_GAME_OVER = 2
@@ -11,6 +11,7 @@ local function hide_all(self)
 		simple_button.disable(v)
 	end
 	gui.set_enabled(self.bg, false)
+	gui.set_enabled(self.bg1, false)
 end
 
 local function set_state(self, state)
@@ -20,7 +21,8 @@ local function set_state(self, state)
 	if state == STATE_HIDDEN then
 		
 	elseif state == STATE_MENU then
-		gui.set_enabled(self.bg, true)
+		gui.set_enabled(self.bg1, true)
+		
 		simple_button.enable(self.start_btn)
 		simple_button.enable(self.continue_btn)
 	elseif state == STATE_GAME_OVER then
@@ -53,8 +55,10 @@ end
 
 
 function init(self)
+	--sound.play_music("music1")
 	msg.post(".", "acquire_input_focus")
     self.bg = gui.get_node("bg")
+    self.bg1 = gui.get_node("bg1")
     self.start_btn = simple_button.create(self, "start_btn", start_game, {})
     self.continue_btn = simple_button.create(self, "continue_btn", continue_game, {})
     self.retry_btn = simple_button.create(self, "retry_btn", retry_game, {})

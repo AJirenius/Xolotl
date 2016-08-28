@@ -1,5 +1,76 @@
 name: "lvl_6"
 instances {
+  id: "cog"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 803.277
+    y: 136.43054
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.2"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.4"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "cog1"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 836.2632
+    y: 157.99846
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.3"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "skin"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
@@ -159,6 +230,19 @@ instances {
     z: 0.0
     w: 1.0
   }
+  component_properties {
+    id: "script"
+    properties {
+      id: "cog1"
+      value: "cog"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
+      id: "cog2"
+      value: "cog1"
+      type: PROPERTY_TYPE_URL
+    }
+  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -253,9 +337,9 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 1094.6511
-    y: 34.12315
-    z: 0.0
+    x: 817.9316
+    y: 106.27115
+    z: 1.0
   }
   rotation {
     x: 0.0

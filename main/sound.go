@@ -39,7 +39,7 @@ embedded_components {
   data: "sound: \"/assets/sfx/jump.wav\"\n"
   "looping: 0\n"
   "group: \"master\"\n"
-  "gain: 1.0\n"
+  "gain: 0.39810717\n"
   ""
   position {
     x: 0.0
@@ -94,12 +94,52 @@ embedded_components {
   }
 }
 embedded_components {
+  id: "music1"
+  type: "sound"
+  data: "sound: \"/assets/sfx/music1.ogg\"\n"
+  "looping: 1\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "music2"
+  type: "sound"
+  data: "sound: \"/assets/sfx/music2.ogg\"\n"
+  "looping: 1\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
   id: "step"
   type: "sound"
   data: "sound: \"/assets/sfx/step.wav\"\n"
   "looping: 0\n"
   "group: \"master\"\n"
-  "gain: 1.0\n"
+  "gain: 0.5011872\n"
   ""
   position {
     x: 0.0
@@ -136,8 +176,8 @@ embedded_components {
 embedded_components {
   id: "wall_open"
   type: "sound"
-  data: "sound: \"/assets/sfx/wall_open.wav\"\n"
-  "looping: 0\n"
+  data: "sound: \"/assets/sfx/wall_open_2.wav\"\n"
+  "looping: 1\n"
   "group: \"master\"\n"
   "gain: 1.0\n"
   ""

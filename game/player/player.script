@@ -1,11 +1,14 @@
 local config  = require "main.config"
 local gop = require "utils.gop"
 local sound = require "main.sound"
-
+go.property("music_taste", hash("music1"))
 go.property("has_shadow", 1)
+
+
 
 local function play_anim(self, anim)
 	if self.current_anim == anim then return end
+	
 	self.current_anim = anim
 	msg.post("#sprite", "play_animation", { id = hash(anim) })
 end
@@ -27,6 +30,7 @@ function init(self)
 	self.is_teleporting = false
 	self.walk_timer = 0
 	play_anim(self, "idle")
+	sound.play_music(self.music_taste)
 end
 
 local function show_game_over(self)

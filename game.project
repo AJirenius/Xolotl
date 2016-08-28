@@ -1,6 +1,7 @@
 [project]
-title = My project
+title = Xolotl
 version = 0.1
+write_log = 1
 
 [bootstrap]
 main_collection = /main/main.collectionc
