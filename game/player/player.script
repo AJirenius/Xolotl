@@ -28,7 +28,10 @@ function init(self)
 	play_anim(self, "idle")
 end
 
-
+local function show_game_over(self)
+	print("show game over")
+	msg.post("main:/start_screen", "set_state", { state = 2 })
+end
 
 local function update_reset(self)
 	self.move_input = vmath.vector3(0,0,0)
@@ -98,6 +101,7 @@ local function fall_death(self)
 	self.is_dead = true
 	factory.create("/factories#instant_fx", go.get_position(), nil, { fx = msg.url("#blood_splatter")})
 	play_anim(self, "fall_death")
+	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 2, 0, show_game_over)
 end
 
 local function handle_contact(self, normal, distance)

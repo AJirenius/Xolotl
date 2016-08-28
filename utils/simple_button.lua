@@ -16,6 +16,11 @@ function M.create(context, node, callback, data)
 end
 
 function M.enable(button)
+	gui.set_enabled(button.node, true)
+end
+
+function M.disable(button)
+	gui.set_enabled(button.node, false)
 end
 
 function M.on_input(context, action_id, action)
@@ -24,7 +29,7 @@ function M.on_input(context, action_id, action)
 	if action_id == hash("touch") then
 		local btn 
 		for i,v in ipairs(btns) do
-			if gui.pick_node(v.node, action.x, action.y) == true then
+			if gui.pick_node(v.node, action.x, action.y) == true and gui.is_enabled(v.node) then
 				btn = v
 			end
 		end

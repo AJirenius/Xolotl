@@ -4,11 +4,20 @@ go.property("timer",99999)
 go.property("cog1",msg.url())
 go.property("cog2",msg.url())
 go.property("cog3",msg.url())
+go.property("direction",1)
 
 function init(self)
     self.pos1 = go.get_position()
     self.pos2 = go.get_position()
-    self.pos2.y = self.pos2.y + 128
+    if self.direction == 1 then
+    	self.pos2.y = self.pos2.y + 128
+    elseif self.direction == 2 then
+    	self.pos2.x = self.pos2.x + 128
+    elseif self.direction == 3 then
+    	self.pos2.y = self.pos2.y - 128
+    elseif self.direction == 4 then
+    	self.pos2.x = self.pos2.x - 128
+    end
     self.is_open = false
     self.current_time = 0
 end

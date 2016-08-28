@@ -14,20 +14,39 @@ function on_message(self, message_id, message, sender)
     	local str = "#lvl_"..tostring(message.id)
     	msg.post(str, "load")
     	current_level = message.id
-    end
-    if message_id == hash("proxy_loaded") then
+    	
+    elseif message_id == hash("proxy_loaded") then
+    	print("proxy:", sender, "LOADED")
     	current_proxy = sender
         msg.post(sender, "init")
     	msg.post(sender, "enable")
-    	msg.post("/start_screen", "disable")
-    end
-    if message_id == hash("completed_level") then
+    	msg.post("/start_screen", "set_state", { state = 0 })
+    	
+    elseif message_id == hash("completed_level") then
+    	print("COMPLETED! now unload:", current_proxy)
     	msg.post(current_proxy, "disable")
         msg.post(current_proxy, "final")
-        msg.post(current_proxy, "unload")
-    	
+        msg.post(current_proxy, "unload")	
     	current_level = current_level + 1
     	user.save_progress(self, current_level)
     	msg.post(".", "load_level", { id = current_level })
+    	
+    elseif message_id == hash("unload_level") then
+    	msg.post(current_proxy, "disable")
+        msg.post(current_proxy, "final")
+        msg.post(current_proxy, "unload")
+        current_proxy = nil
+    
+    elseif message_id == hash("restart_level") then
+    	self.is_restarting = true
+    	msg.post(current_proxy, "disable")
+        msg.post(current_proxy, "final")
+        msg.post(current_proxy, "unload")
+        
+    elseif message_id == hash("proxy_unloaded") and self.is_restarting then
+    	print("proxy unloaded: is restarting")
+    	msg.post(".", "load_level", { id = current_level })	
+    	self.is_restarting = false
+    	current_proxy = nil
     end
 end

@@ -1,27 +1,77 @@
 local simple_button = require "utils.simple_button"
 local user = require "game.user"
 local config = require "main.config"
-local function start_game()
+
+local STATE_HIDDEN = 0
+local STATE_MENU = 1
+local STATE_GAME_OVER = 2
+
+local function hide_all(self)
+	for i,v in ipairs(self.buttons) do	
+		simple_button.disable(v)
+	end
+	gui.set_enabled(self.bg, false)
+end
+
+local function set_state(self, state)
+	if current_state == state then return end
+	current_state = state
+	hide_all(self)
+	if state == STATE_HIDDEN then
+		
+	elseif state == STATE_MENU then
+		gui.set_enabled(self.bg, true)
+		simple_button.enable(self.start_btn)
+		simple_button.enable(self.continue_btn)
+	elseif state == STATE_GAME_OVER then
+		gui.set_enabled(self.bg, true)
+		simple_button.enable(self.retry_btn)
+		simple_button.enable(self.back_btn)
+	end
+end
+
+
+local function start_game(self)
 	user.save_progress(self, 1 or config.START_LEVEL)
-	print("starting level:",user.user.progress)
 	msg.post("/level_loader", "load_level", {id = config.START_LEVEL or user.user.progress})
 end
 
-local function continue_game()
+local function continue_game(self)
 	user.load_progress(self)
-	print("continue game on level: user.user.progress")
 	msg.post("/level_loader", "load_level", {id = user.user.progress})
 end
 
-function init(self)
-	msg.post(".", "acquire_input_focus")
-    self.start_btn = simple_button.create(self, "start_btn", start_game, {})
-    self.continue_btn = simple_button.create(self, "continue_btn", continue_game, {})
+local function retry_game(self)
+	user.load_progress(self)
+	msg.post("/level_loader", "restart_level")
+end
+
+local function back(self)
+	msg.post("/level_loader", "unload_level")
+	set_state(self, 1)
 end
 
 
+function init(self)
+	msg.post(".", "acquire_input_focus")
+    self.bg = gui.get_node("bg")
+    self.start_btn = simple_button.create(self, "start_btn", start_game, {})
+    self.continue_btn = simple_button.create(self, "continue_btn", continue_game, {})
+    self.retry_btn = simple_button.create(self, "retry_btn", retry_game, {})
+    self.back_btn = simple_button.create(self, "back_btn", function() back(self) end, {})
+    self.buttons = {
+    	self.start_btn,
+    	self.continue_btn,
+    	self.retry_btn,
+    	self.back_btn,
+    }
+    set_state(self, STATE_MENU)
+end
+
 function on_message(self, message_id, message, sender)
-   
+	if message_id == hash("set_state") then
+		set_state(self, message.state)
+	end
 end
 
 function on_input(self, action_id, action)

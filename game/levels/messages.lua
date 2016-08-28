@@ -23,5 +23,13 @@ return {
 		title = "Your devoted friend",
 		msg = "He doesn't seem to like the color red, now does he?"
 		},
+[7] = { 
+		title = "No way out",
+		msg = "Well, that was before out dark friend, right?"
+		},
+[8] = { 
+		title = "Such a pure sacrifice",
+		msg = "I hope you are ready for your hardest challenge so far"
+		},
 }
 
