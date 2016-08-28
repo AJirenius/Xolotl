@@ -22,7 +22,7 @@ local function set_state(self, state)
 		
 	elseif state == STATE_MENU then
 		gui.set_enabled(self.bg1, true)
-		
+		sound.play_music("intro")
 		simple_button.enable(self.start_btn)
 		simple_button.enable(self.continue_btn)
 	elseif state == STATE_GAME_OVER then
@@ -55,7 +55,7 @@ end
 
 
 function init(self)
-	--sound.play_music("music1")
+	
 	msg.post(".", "acquire_input_focus")
     self.bg = gui.get_node("bg")
     self.bg1 = gui.get_node("bg1")

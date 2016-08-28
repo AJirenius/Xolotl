@@ -65,7 +65,7 @@ embedded_components {
   type: "sprite"
   data: "tile_set: \"/assets/gfx/ingame.atlas\"\n"
   "default_animation: \"mech_wall\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/main/render/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {

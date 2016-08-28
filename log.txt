@@ -1,9 +1,7 @@
 INFO:DLIB: Writing log to: ./log.txt
-INFO:ENGINE: Loading data from: http://192.168.1.27:8080/build/default
+INFO:ENGINE: Loading data from: build/default
 INFO:ENGINE: Initialised sound device 'default'
 
-DEBUG:SCRIPT: proxy:	url: [main:/level_loader#lvl_6]	LOADED
-DEBUG:SCRIPT: url: [lvl_6:/player#blood_splatter]	url: [lvl_6:/instance0#script]
-DEBUG:SCRIPT: show game over
-INFO:DLIB: Flushing http cache to disk
+INFO:DLIB: SSDP: Started on address 192.168.1.27
+DEBUG:SCRIPT: proxy:	url: [main:/level_loader#lvl_8]	LOADED
 INFO:DLIB: SSDP: Done on address 192.168.1.27

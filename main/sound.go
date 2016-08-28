@@ -14,10 +14,50 @@ components {
   }
 }
 embedded_components {
+  id: "game_over"
+  type: "sound"
+  data: "sound: \"/assets/sfx/died.ogg\"\n"
+  "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
   id: "high_fall"
   type: "sound"
   data: "sound: \"/assets/sfx/high_fall.wav\"\n"
   "looping: 0\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "intro"
+  type: "sound"
+  data: "sound: \"/assets/sfx/intro.ogg\"\n"
+  "looping: 1\n"
   "group: \"master\"\n"
   "gain: 1.0\n"
   ""
@@ -178,6 +218,26 @@ embedded_components {
   type: "sound"
   data: "sound: \"/assets/sfx/wall_open_2.wav\"\n"
   "looping: 1\n"
+  "group: \"master\"\n"
+  "gain: 1.0\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "win"
+  type: "sound"
+  data: "sound: \"/assets/sfx/finished.ogg\"\n"
+  "looping: 0\n"
   "group: \"master\"\n"
   "gain: 1.0\n"
   ""

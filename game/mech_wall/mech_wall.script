@@ -34,6 +34,7 @@ local function move_wall(self, pos, speed)
 	msg.post(self.cog1, "start")
 	msg.post(self.cog2, "start")
 	msg.post(self.cog3, "start")
+	print("PLAY WALL")
 	self.sound = sound.play("wall_open")    		
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, pos, go.EASING_INOUTSINE, speed, 0, function()  stop_all(self) end)
 end

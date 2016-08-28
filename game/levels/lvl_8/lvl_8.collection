@@ -1,0 +1,22 @@
+name: "lvl_8"
+instances {
+  id: "end_screen"
+  prototype: "/game/levels/lvl_8/end_screen.go"
+  position {
+    x: 952.8967
+    y: 315.83447
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+scale_along_z: 0

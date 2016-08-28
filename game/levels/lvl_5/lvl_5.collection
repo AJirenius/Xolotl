@@ -111,9 +111,9 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 1077.484
-    y: 486.11688
-    z: 0.0
+    x: 936.37616
+    y: 48.09456
+    z: 0.1
   }
   rotation {
     x: 0.0
@@ -148,6 +148,126 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 223.70946
+    y: 76.919106
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area1"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 136.74625
+    y: 306.03372
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area2"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 452.82407
+    y: 513.40753
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area3"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 594.97546
+    y: 546.8549
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area4"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 847.50323
+    y: 96.98754
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area5"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 120.02255
+    y: 185.62312
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.71035326
+    w: 0.7038453
   }
   scale3 {
     x: 1.0

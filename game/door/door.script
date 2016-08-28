@@ -1,33 +1,13 @@
 local user = require "game.user"
+local sound = require "main.sound"
 
-function init(self)
-    -- Add initialization code here
-    -- Remove this function if not needed
-end
-
-function final(self)
-    -- Add finalization code here
-    -- Remove this function if not needed
-end
-
-function update(self, dt)
-    -- Add update code here
-    -- Remove this function if not needed
-end
 
 function on_message(self, message_id, message, sender)
-    if message_id == hash("trigger_response") then
-    	print("level_completed")
-    	msg.post("main:/level_loader", "completed_level")
+    if message_id == hash("trigger_response") and self.is_completed ~= true then
+    	self.is_completed = true
+    	sound.play_music("win")
+    	particlefx.play("#particlefx")
+    	msg.post("/player", "level_complete")
+    	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 4.5, 0, function() msg.post("main:/level_loader", "completed_level")end)
     end
-end
-
-function on_input(self, action_id, action)
-    -- Add input-handling code here
-    -- Remove this function if not needed
-end
-
-function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
 end

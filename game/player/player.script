@@ -31,10 +31,11 @@ function init(self)
 	self.walk_timer = 0
 	play_anim(self, "idle")
 	sound.play_music(self.music_taste)
+	sound.stop_all_sound()
 end
 
 local function show_game_over(self)
-	print("show game over")
+	sound.stop_all_sound()
 	msg.post("main:/start_screen", "set_state", { state = 2 })
 end
 
@@ -103,7 +104,7 @@ end
 
 function update(self, dt)
 	
-	if self.is_teleporting == true or self.is_dead == true then return end
+	if self.is_teleporting == true or self.is_dead == true or self.is_complete == true then return end
 	update_animation(self)
 	update_sound(self, dt)
 	update_movement(self, dt)
@@ -116,7 +117,11 @@ local function fall_death(self)
 	factory.create("/factories#instant_fx", go.get_position(), nil, { fx = msg.url("#blood_splatter")})
 	play_anim(self, "fall_death")
 	sound.play("high_fall")
-	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 2, 0, show_game_over)
+	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.5, 0, function() 
+		sound.play_music("game_over")
+		
+		go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 1.5, 0, show_game_over)
+	end)
 end
 
 local function handle_contact(self, normal, distance)
@@ -155,6 +160,15 @@ function on_message(self, message_id, message, sender)
 			handle_contact(self, message.normal, message.distance)
 		end
 	end 
+	if message_id == hash("level_complete") then
+		self.is_complete = true
+		play_anim(self, "teleport")
+		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, go.get_position(sender), go.EASING_INOUTSINE, 0.7)
+		go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0.01, go.EASING_INBACK, 0.7, 0, function()
+			msg.post(".", "disable")
+		end)
+		
+	end
 end
 local function jump(self)
 	if self.vertical_contact == 1 then

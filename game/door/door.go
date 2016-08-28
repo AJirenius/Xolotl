@@ -1,4 +1,19 @@
 components {
+  id: "particlefx"
+  component: "/assets/fx/win.particlefx"
+  position {
+    x: 0.0
+    y: 8.93674
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+components {
   id: "script"
   component: "/game/door/door.script"
   position {

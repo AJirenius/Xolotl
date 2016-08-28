@@ -71,6 +71,82 @@ instances {
   }
 }
 instances {
+  id: "cog2"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 138.99704
+    y: 415.17676
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.3"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "skin"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "cog3"
+  prototype: "/game/mech_wall/cog.go"
+  position {
+    x: 207.48721
+    y: 415.65314
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "delay"
+      value: "0.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "time"
+      value: "0.3"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "skin"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
@@ -266,6 +342,16 @@ instances {
   component_properties {
     id: "script"
     properties {
+      id: "cog1"
+      value: "cog2"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
+      id: "cog2"
+      value: "cog3"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
       id: "direction"
       value: "3.0"
       type: PROPERTY_TYPE_NUMBER
@@ -337,9 +423,9 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 817.9316
-    y: 106.27115
-    z: 1.0
+    x: 1095.0554
+    y: 34.533417
+    z: 0.2
   }
   rotation {
     x: 0.0
@@ -366,6 +452,166 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 1087.8798
+    y: 434.06793
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area1"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 1087.8798
+    y: 523.9365
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area2"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 1050.2803
+    y: 256.3918
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area3"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 914.0731
+    y: 256.3918
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area4"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 155.88374
+    y: 80.86719
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area5"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 67.42872
+    y: 146.77486
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.68892145
+    w: 0.724836
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area6"
+  prototype: "/game/sick_area.go"
+  position {
+    x: 60.491074
+    y: 368.7796
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.68892145
+    w: 0.724836
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "sick_area7"
+  prototype: "/game/sick_area_long.go"
+  position {
+    x: 233.42136
+    y: 521.15326
+    z: 0.05
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70327944
+    w: 0.71091354
   }
   scale3 {
     x: 1.0
