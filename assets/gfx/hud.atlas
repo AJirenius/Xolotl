@@ -13,6 +13,9 @@ images {
 images {
   image: "/assets/gfx/start_bg.png"
 }
+images {
+  image: "/main/images/logo.png"
+}
 margin: 1
 extrude_borders: 1
 inner_padding: 0
