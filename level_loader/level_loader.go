@@ -67,7 +67,7 @@ embedded_components {
 embedded_components {
   id: "lvl_4"
   type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
+  data: "collection: \"/game/levels/lvl_4_easy/lvl_4.collection\"\n"
   ""
   position {
     x: 0.0
@@ -118,7 +118,7 @@ embedded_components {
 embedded_components {
   id: "lvl_7"
   type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_7/lvl_7.collection\"\n"
+  data: "collection: \"/game/levels/lvl_7_easy/lvl_7.collection\"\n"
   ""
   position {
     x: 0.0
@@ -134,6 +134,23 @@ embedded_components {
 }
 embedded_components {
   id: "lvl_8"
+  type: "collectionproxy"
+  data: "collection: \"/game/levels/lvl_7/lvl_7.collection\"\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "lvl_9"
   type: "collectionproxy"
   data: "collection: \"/game/levels/lvl_8/lvl_8.collection\"\n"
   ""

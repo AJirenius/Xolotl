@@ -1,4 +1,4 @@
-name: "lvl_8"
+name: "end_screen"
 instances {
   id: "end_screen"
   prototype: "/game/levels/lvl_8/end_screen.go"

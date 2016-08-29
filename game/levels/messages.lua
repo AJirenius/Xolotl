@@ -35,5 +35,10 @@ return {
 		title = "Waiting...",
 		msg = "We are longing for you, Please hurry up"
 		},
+[10] = { 
+		title = "The final challenge",
+		msg = "This is the last level. I have not seen many people complete it. If you do, please write the codeword you will be given in the comments"
+		},
+
 }
 

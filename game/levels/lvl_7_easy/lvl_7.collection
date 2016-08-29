@@ -1,10 +1,10 @@
-name: "lvl_8"
+name: "lvl_7"
 instances {
   id: "cog"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 220.78653
-    y: 174.14392
+    x: 257.80594
+    y: 512.789
     z: 0.05
   }
   rotation {
@@ -36,8 +36,8 @@ instances {
   id: "cog1"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 189.34944
-    y: 192.72038
+    x: 226.36885
+    y: 531.3655
     z: 0.05
   }
   rotation {
@@ -74,8 +74,8 @@ instances {
   id: "cog2"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 779.9082
-    y: 217.96004
+    x: 902.5025
+    y: 499.20764
     z: 0.05
   }
   rotation {
@@ -107,8 +107,8 @@ instances {
   id: "cog3"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 748.4711
-    y: 194.732
+    x: 871.0654
+    y: 475.9796
     z: 0.05
   }
   rotation {
@@ -145,8 +145,8 @@ instances {
   id: "cog4"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 528.60547
-    y: 122.64539
+    x: 567.9372
+    y: 511.03494
     z: 0.05
   }
   rotation {
@@ -183,8 +183,8 @@ instances {
   id: "cog5"
   prototype: "/game/mech_wall/cog.go"
   position {
-    x: 470.49536
-    y: 124.07836
+    x: 509.8271
+    y: 512.4679
     z: 0.05
   }
   rotation {
@@ -221,8 +221,8 @@ instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
-    x: 1087.6511
-    y: 34.640987
+    x: 90.0
+    y: 448.0
     z: 0.0
   }
   rotation {
@@ -281,8 +281,8 @@ instances {
   id: "lever"
   prototype: "/game/mech_wall/lever.go"
   position {
-    x: 640.89496
-    y: 224.74149
+    x: 304.7469
+    y: 64.0
     z: 0.0
   }
   rotation {
@@ -314,8 +314,8 @@ instances {
   id: "lever1"
   prototype: "/game/mech_wall/lever.go"
   position {
-    x: 1090.1017
-    y: 479.92322
+    x: 624.2483
+    y: 64.0
     z: 0.0
   }
   rotation {
@@ -347,8 +347,8 @@ instances {
   id: "lever2"
   prototype: "/game/mech_wall/lever.go"
   position {
-    x: 1072.899
-    y: 319.93893
+    x: 946.61346
+    y: 64.0
     z: 0.0
   }
   rotation {
@@ -377,28 +377,8 @@ instances {
   }
 }
 instances {
-  id: "lightbeam"
-  prototype: "/game/lightbeam.go"
-  position {
-    x: 1090.582
-    y: 574.28894
-    z: 0.05
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: -0.32404304
-    w: 0.94604236
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
   id: "lvl"
-  prototype: "/game/levels/lvl_7/lvl_7.go"
+  prototype: "/game/levels/lvl_7_easy/lvl_7.go"
   position {
     x: -0.0
     y: 0.0
@@ -420,51 +400,8 @@ instances {
   id: "mech_wall"
   prototype: "/game/mech_wall/mech_wall.go"
   position {
-    x: 720.0
-    y: 112.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "close_speed"
-      value: "17.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "timer"
-      value: "5.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "cog1"
-      value: "cog2"
-      type: PROPERTY_TYPE_URL
-    }
-    properties {
-      id: "cog2"
-      value: "cog3"
-      type: PROPERTY_TYPE_URL
-    }
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "mech_wall1"
-  prototype: "/game/mech_wall/mech_wall.go"
-  position {
-    x: 432.0
-    y: 112.0
+    x: 944.0
+    y: 496.0
     z: 0.0
   }
   rotation {
@@ -482,11 +419,54 @@ instances {
     }
     properties {
       id: "close_speed"
-      value: "11.0"
+      value: "2.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "timer"
+      id: "cog1"
+      value: "cog2"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
+      id: "cog2"
+      value: "cog3"
+      type: PROPERTY_TYPE_URL
+    }
+    properties {
+      id: "direction"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "mech_wall1"
+  prototype: "/game/mech_wall/mech_wall.go"
+  position {
+    x: 624.0
+    y: 496.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "open_speed"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "close_speed"
       value: "2.0"
       type: PROPERTY_TYPE_NUMBER
     }
@@ -500,6 +480,11 @@ instances {
       value: "cog5"
       type: PROPERTY_TYPE_URL
     }
+    properties {
+      id: "direction"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
   }
   scale3 {
     x: 1.0
@@ -511,8 +496,8 @@ instances {
   id: "mech_wall2"
   prototype: "/game/mech_wall/mech_wall.go"
   position {
-    x: 240.0
-    y: 112.0
+    x: 304.0
+    y: 496.0
     z: 0.0
   }
   rotation {
@@ -525,17 +510,17 @@ instances {
     id: "script"
     properties {
       id: "open_speed"
-      value: "0.5"
+      value: "1.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
       id: "close_speed"
-      value: "4.0"
+      value: "5.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
       id: "timer"
-      value: "0.5"
+      value: "6.5"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -548,6 +533,11 @@ instances {
       value: "cog1"
       type: PROPERTY_TYPE_URL
     }
+    properties {
+      id: "direction"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
   }
   scale3 {
     x: 1.0
@@ -559,8 +549,8 @@ instances {
   id: "msg_sign"
   prototype: "/game/msg_sign/msg_sign.go"
   position {
-    x: 576.54504
-    y: 449.09174
+    x: 182.41574
+    y: 104.70691
     z: 0.0
   }
   rotation {
@@ -573,7 +563,7 @@ instances {
     id: "script"
     properties {
       id: "msg_id"
-      value: "10.0"
+      value: "9.0"
       type: PROPERTY_TYPE_NUMBER
     }
   }
@@ -587,8 +577,8 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 511.25055
-    y: 226.96532
+    x: 77.77434
+    y: 72.74782
     z: 0.1
   }
   rotation {
@@ -615,8 +605,8 @@ instances {
   id: "shadow"
   prototype: "/game/shadow/shadow.go"
   position {
-    x: 818.14233
-    y: 479.08084
+    x: -540.26447
+    y: 966.95935
     z: 0.0
   }
   rotation {
@@ -635,8 +625,8 @@ instances {
   id: "sick_area"
   prototype: "/game/sick_area.go"
   position {
-    x: 188.36565
-    y: 253.32347
+    x: 713.8164
+    y: 512.982
     z: 0.05
   }
   rotation {
@@ -655,8 +645,8 @@ instances {
   id: "sick_area1"
   prototype: "/game/sick_area.go"
   position {
-    x: 333.67838
-    y: 95.23599
+    x: 848.757
+    y: 512.982
     z: 0.05
   }
   rotation {
@@ -675,8 +665,8 @@ instances {
   id: "sick_area2"
   prototype: "/game/sick_area.go"
   position {
-    x: 520.50903
-    y: 96.83284
+    x: 390.77664
+    y: 512.982
     z: 0.05
   }
   rotation {
@@ -695,15 +685,15 @@ instances {
   id: "sick_area3"
   prototype: "/game/sick_area.go"
   position {
-    x: 637.0786
-    y: 111.20443
+    x: 525.7173
+    y: 512.982
     z: 0.05
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: -0.7173561
-    w: 0.6967067
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -715,8 +705,8 @@ instances {
   id: "sick_area4"
   prototype: "/game/sick_area.go"
   position {
-    x: 1004.35254
-    y: 104.817055
+    x: 90.22699
+    y: 512.982
     z: 0.05
   }
   rotation {
@@ -735,8 +725,8 @@ instances {
   id: "sick_area5"
   prototype: "/game/sick_area.go"
   position {
-    x: 189.9625
-    y: 261.30768
+    x: 225.16765
+    y: 512.982
     z: 0.05
   }
   rotation {
@@ -744,66 +734,6 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "sick_area_long"
-  prototype: "/game/sick_area_long.go"
-  position {
-    x: 827.1029
-    y: 74.477036
-    z: 0.05
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "sick_area_long1"
-  prototype: "/game/sick_area_long.go"
-  position {
-    x: 167.60669
-    y: 109.60758
-    z: 0.05
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: -0.70327944
-    w: 0.71091354
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "sick_area_long2"
-  prototype: "/game/sick_area_long.go"
-  position {
-    x: 170.80037
-    y: 376.2804
-    z: 0.05
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: -0.70327944
-    w: 0.71091354
   }
   scale3 {
     x: 1.0

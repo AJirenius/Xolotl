@@ -25,3 +25,6 @@ max_collisions = 128
 [script]
 shared_state = 1
 
+[collection_proxy]
+max_count = 16
+
