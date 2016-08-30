@@ -1,134 +1,10 @@
 name: "lvl_4"
 instances {
-  id: "cog"
-  prototype: "/game/mech_wall/cog.go"
-  position {
-    x: 975.9249
-    y: 314.91113
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "delay"
-      value: "0.2"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "time"
-      value: "0.3"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "auto_start"
-      value: "1.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-  scale3 {
-    x: 2.0
-    y: 2.0
-    z: 1.0
-  }
-}
-instances {
-  id: "cog1"
-  prototype: "/game/mech_wall/cog.go"
-  position {
-    x: 865.0017
-    y: 240.00197
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "delay"
-      value: "0.5"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "time"
-      value: "0.4"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "auto_start"
-      value: "1.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "skin"
-      value: "3.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-  scale3 {
-    x: 2.0
-    y: 2.0
-    z: 1.0
-  }
-}
-instances {
-  id: "cog2"
-  prototype: "/game/mech_wall/cog.go"
-  position {
-    x: 931.2675
-    y: 156.44942
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "delay"
-      value: "0.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "time"
-      value: "0.2"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "auto_start"
-      value: "1.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "skin"
-      value: "2.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-  scale3 {
-    x: 2.0
-    y: 2.0
-    z: 1.0
-  }
-}
-instances {
   id: "door"
   prototype: "/game/door/door.go"
   position {
-    x: 536.89856
-    y: 386.54584
+    x: 1090.1604
+    y: 416.0
     z: 0.0
   }
   rotation {
@@ -184,6 +60,34 @@ instances {
   }
 }
 instances {
+  id: "lever"
+  prototype: "/game/mech_wall/lever.go"
+  position {
+    x: 640.0
+    y: 124.0
+    z: 0.05
+  }
+  rotation {
+    x: 0.0070709498
+    y: 0.0070709498
+    z: 0.7070714
+    w: 0.7070714
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "pulse_target"
+      value: "mech_wall"
+      type: PROPERTY_TYPE_URL
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "lightbeam"
   prototype: "/game/lightbeam.go"
   position {
@@ -224,24 +128,34 @@ instances {
   }
 }
 instances {
-  id: "msg_sign"
-  prototype: "/game/msg_sign/msg_sign.go"
+  id: "mech_wall"
+  prototype: "/game/mech_wall/mech_wall.go"
   position {
-    x: 1047.7019
-    y: 546.30896
-    z: 0.0
+    x: 976.0
+    y: 400.0
+    z: 0.05
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: 0.70710677
+    w: 0.70710677
   }
   component_properties {
     id: "script"
     properties {
-      id: "msg_id"
-      value: "5.0"
+      id: "close_speed"
+      value: "8.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "timer"
+      value: "6.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "direction"
+      value: "3.0"
       type: PROPERTY_TYPE_NUMBER
     }
   }
@@ -255,8 +169,8 @@ instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 55.24171
-    y: 549.57825
+    x: 616.4606
+    y: 513.867
     z: 1.0
   }
   rotation {
@@ -318,7 +232,7 @@ embedded_instances {
   position {
     x: 955.7762
     y: 251.51909
-    z: 0.05
+    z: -0.2
   }
   rotation {
     x: 0.0

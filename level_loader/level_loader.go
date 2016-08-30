@@ -31,6 +31,23 @@ embedded_components {
   }
 }
 embedded_components {
+  id: "lvl_10"
+  type: "collectionproxy"
+  data: "collection: \"/game/levels/lvl_8/lvl_8.collection\"\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
   id: "lvl_2"
   type: "collectionproxy"
   data: "collection: \"/game/levels/lvl_2/lvl_2.collection\"\n"
@@ -152,7 +169,7 @@ embedded_components {
 embedded_components {
   id: "lvl_9"
   type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_8/lvl_8.collection\"\n"
+  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
   ""
   position {
     x: 0.0
