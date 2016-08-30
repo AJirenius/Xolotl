@@ -152,7 +152,7 @@ embedded_components {
 embedded_components {
   id: "lvl_8"
   type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_7/lvl_7.collection\"\n"
+  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
   ""
   position {
     x: 0.0
@@ -169,7 +169,7 @@ embedded_components {
 embedded_components {
   id: "lvl_9"
   type: "collectionproxy"
-  data: "collection: \"/game/levels/lvl_4/lvl_4.collection\"\n"
+  data: "collection: \"/game/levels/lvl_7/lvl_7.collection\"\n"
   ""
   position {
     x: 0.0
